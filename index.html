@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janaseva Kendra</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #003f7f;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            position: relative;
+        }
+        nav a:hover {
+            background-color: #0056b3;
+            border-radius: 5px;
+        }
+        nav .dropdown {
+            position: relative;
+        }
+        nav .dropdown a {
+            padding: 15px 30px;
+        }
+        nav .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        nav .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #003f7f;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            min-width: 200px;
+        }
+        nav .dropdown-menu a {
+            display: block;
+            padding: 10px 20px;
+            white-space: nowrap;
+        }
+        nav .dropdown-menu a:hover {
+            background-color: #0056b3;
+        }
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: url('images/banner.jpeg') no-repeat center center/cover;
+            color: rgb(234, 238, 30);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .hero h2 {
+            margin: 0;
+            font-size: 3em;
+        }
+        .hero p {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 60px 20px;
+            background-color: #ffffff;
+        }
+        .service {
+            flex: 1 1 calc(33.333% - 40px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #f9f9f9, #e9ecef);
+            text-align: center;
+            min-width: 250px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        .service h3 {
+            color: #007bff;
+            margin: 15px 0;
+        }
+        .service p {
+            font-size: 1em;
+            line-height: 1.8;
+            color: #555;
+        }
+        footer {
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            color: white;
+            text-align: center;
+            padding: 30px 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        .footer-container {
+    text-align: center;
+    padding: 30px 10px;
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: white;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffe600;
+}
+
+.contact-info {
+    margin: 20px 0;
+    color: #f4f4f4;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-media a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-media img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-media a:hover img {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+.social-media a:nth-child(1):hover {
+    transform: translateY(-5px);
+}
+
+.social-media a:nth-child(2):hover {
+    transform: translateY(-10px);
+}
+
+.social-media a:nth-child(3):hover {
+    transform: translateY(-15px);
+}
+
+.social-media a:nth-child(4):hover {
+    transform: translateY(-20px);
+}
+
+footer p {
+    font-size: 0.9em;
+    color: #f4f4f4;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-media {
+        gap: 15px;
+    }
+
+    .contact-info p {
+        font-size: 0.9em;
+    }
+
+    .social-media img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-media img {
+        width: 30px;
+        height: 30px;
+    }
+}
+.events-updates {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.events-updates h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #0056b3;
+}
+
+.scrolling-container {
+    height: 90px; /* Adjust height as needed */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scrolling-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    animation: scrollUp 30s linear infinite;
+}
+
+.scrolling-content p {
+    margin: 0;
+    padding: 5px 0;
+    font-size: 1.2em; /* Adjust size as needed */
+    line-height: 1.5;
+    color: #333;
+    text-align: center;
+}
+
+@keyframes scrollUp {
+    0% {
+        transform: translateY(100%);
+    }
+    10% {
+        transform: translateY(0);
+    }
+    90% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>OmDigitalSolution</h1>
+        <p>Your One-Stop Solution for Public Services</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a href="#">Services</a>
+            <div class="dropdown-menu">
+                <a href="#"><img src="images/aadhaar logo.png" width="10%">  Aadhaar Services</a>
+                <a href="#"><img src="images/pan card.jpg" width="10%">  PAN Card Assistance</a>
+                <a href="#"><img src="images/bill payment.jpg" width="10%">  Bill Payments</a>
+                <a href="#"><img src="images/govt scheme.jpg" width="10%">   Government Schemes</a>
+                <a href="#"><img src="images/bank.jpg" width="10%">  Banking Services</a>
+                <a href="#"><img src="images/online.jpg" width="10%">  Online Applications</a>
+                <a href="#"><img src="images/dl.jpg" width="10%"> Driving licence releted service</a>
+            </div>
+        </div>
+        <a href="events.html">Events</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+    </nav>
+    <section class="hero">
+        <h2>Empowering Communities Through Digital Services</h2>
+        <p>Convenient, Reliable, and Affordable Public Services at Your Doorstep</p>
+    </section>
+    <section id="services" class="services">
+        <div class="service">
+            <h3>Aadhaar Services</h3>
+            <p>New Aadhaar enrollment, updates, and corrections made easy.</p>
+        </div>
+        <div class="service">
+            <h3>PAN Card Assistance</h3>
+            <p>Apply for a new PAN card or make corrections without hassle.</p>
+        </div>
+        <div class="service">
+            <h3>Bill Payments</h3>
+            <p>Electricity, water, and other utility bill payments made convenient.</p>
+        </div>
+        <div class="service">
+            <h3>Government Schemes</h3>
+            <p>Assistance with government scheme applications and benefits.</p>
+        </div>
+        <div class="service">
+            <h3>Banking Services</h3>
+            <p>Basic banking services like deposits, withdrawals, and account openings.</p>
+        </div>
+        <div class="service">
+            <h3>Online Applications</h3>
+            <p>Help with online form submissions for jobs, exams, and more.</p>
+        </div>
+    </section>
+    <section class="events-updates">
+        <h2>Events and Updates</h2>
+        <div class="scrolling-container">
+            <div class="scrolling-content">
+                <p>📢 Aadhaar enrollment camp on January 10, 2024.</p>
+                <p>📢 New PAN card assistance starts February 1, 2024.</p>
+                <p>📢 Free health check-up camp on March 5, 2024.</p>
+                <p>📢 Government schemes workshop on April 12, 2024.</p>
+                <p>📢 Banking services extended on weekends starting May 2024.</p>
+            </div>
+        </div>
+    </section>           
+    <footer>
+        <div class="footer-container">
+            <div class="contact-info">
+                <p><strong>Address:</strong> Om Digital Solution, samapada, Laida,Sambalpur, Odisha, 768214</p>
+                <p><strong>Phone:</strong> +19 966 8147 892</p>
+                <p><strong>Email:</strong> omdigitalsolution@gmail.com</p>
+            </div>
+            <div class="social-media">
+                <a href="https://facebook.com" class="social-icon" target="_blank"><img src="images/facebook logo.jpg" alt="Facebook"></a>
+                <a href="https://twitter.com" class="social-icon" target="_blank"><img src="images/x.png" alt="Twitter"></a>
+                <a href="https://instagram.com" class="social-icon" target="_blank"><img src="images/Instagram.jpeg" alt="Instagram"></a>
+                <a href="https://linkedin.com" class="social-icon" target="_blank"><img src="images/linkedln.png" alt="LinkedIn"></a>
+            </div>
+            <p>&copy; 2024 Janaseva Kendra. All Rights Reserved.</p>
+        </div>
+    </footer>       
+</body>
+</html>
