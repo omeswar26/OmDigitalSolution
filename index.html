@@ -303,13 +303,13 @@ footer p {
         <div class="dropdown">
             <a href="#">Services</a>
             <div class="dropdown-menu">
-                <a href="website/login.html"><img src="images/aadhaar logo.png" width="10%">  Aadhaar Services</a>
-                <a href="website/login.html"><img src="images/pan card.jpg" width="10%">  PAN Card Assistance</a>
-                <a href="website/login.html"><img src="images/bill payment.jpg" width="10%">  Bill Payments</a>
-                <a href="website/login.html"><img src="images/govt scheme.jpg" width="10%">   Government Schemes</a>
-                <a href="website/login.html"><img src="images/bank.jpg" width="10%">  Banking Services</a>
-                <a href="website/login.html"><img src="images/online.jpg" width="10%">  Online Applications</a>
-                <a href="website/login.html"><img src="images/dl.jpg" width="10%"> Driving licence releted service</a>
+                <a href="website/login.html" onclick="return confirmRedirect();"><img src="images/aadhaar logo.png" width="10%">  Aadhaar Services</a>
+                <a href="website/login.html" onclick="return confirmRedirect();"><img src="images/pan card.jpg" width="10%">  PAN Card Assistance</a>
+                <a href="website/login.html" onclick="return confirmRedirect();"><img src="images/bill payment.jpg" width="10%">  Bill Payments</a>
+                <a href="website/login.html" onclick="return confirmRedirect();"><img src="images/govt scheme.jpg" width="10%">   Government Schemes</a>
+                <a href="website/login.html" onclick="return confirmRedirect();"><img src="images/bank.jpg" width="10%">  Banking Services</a>
+                <a href="website/login.html" onclick="return confirmRedirect();"><img src="images/online.jpg" width="10%">  Online Applications</a>
+                <a href="website/login.html" onclick="return confirmRedirect();"><img src="images/dl.jpg" width="10%"> Driving licence releted service</a>
             </div>
         </div>
         <a href="website/events.html">Events</a>
@@ -374,6 +374,16 @@ footer p {
             </div>
             <p>&copy; 2024 Janaseva Kendra. All Rights Reserved.</p>
         </div>
-    </footer>       
+    </footer> 
+    <script>
+        function confirmRedirect() {
+          if (confirm("Clik ok to to log in to your account")) {
+            window.location.href = "new_page.html"; // Replace "new_page.html" with the actual URL
+            return true;
+          } else {
+            return false;
+          }
+        }
+        </script>
 </body>
 </html>
