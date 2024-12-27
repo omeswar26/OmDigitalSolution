@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Upcoming Events at Janaseva Kendra">
+    <meta name="keywords" content="Events, Janaseva, Community, Workshops, Seminars">
+    <title>Janaseva Kendra - Events</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        .events-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+        }
+
+        .event-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .event-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .event-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .event-details {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .event-details h3 {
+            margin: 10px 0;
+            color: #6a11cb;
+        }
+
+        .event-details p {
+            font-size: 0.9em;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .event-details a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .event-details a:hover {
+            background: linear-gradient(45deg, #2575fc, #6a11cb);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .event-card {
+            animation: fadeIn 1s ease both;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 10px;
+            background: linear-gradient(45deg, #2575fc, #6a11cb);
+            color: white;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Janaseva Kendra Events</h1>
+        <p>Join Us for Community-Building Experiences</p>
+    </header>
+
+    <section class="events-container">
+        <div class="event-card">
+            <img src="workshop.jpg" alt="Workshop">
+            <div class="event-details">
+                <h3>Digital Literacy Workshop</h3>
+                <p>Empower yourself with essential digital skills in this hands-on workshop.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <img src="health.jpg" alt="Health Camp">
+            <div class="event-details">
+                <h3>Health Camp</h3>
+                <p>Free medical check-ups and health consultations for the community.</p>
+                <a href="#">Join Us</a>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <img src="seminar.jpg" alt="Seminar">
+            <div class="event-details">
+                <h3>Entrepreneurship Seminar</h3>
+                <p>Learn the basics of starting and managing a successful business.</p>
+                <a href="#">Register Now</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Janaseva Kendra. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
