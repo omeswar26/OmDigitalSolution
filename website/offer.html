@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Special Offers at Common Service Center">
+    <meta name="keywords" content="CSC, Offers, Public Services, Discounts">
+    <title>Offers</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            overflow-x: hidden;
+        }
+        header {
+            background: linear-gradient(90deg, #1a73e8, #4caf50);
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            margin-top: 5px;
+            font-size: 1.2em;
+        }
+        .offer-section {
+            padding: 60px 20px;
+            text-align: center;
+            background: #ffffff;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .offer-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #1a73e8;
+        }
+        .offer-section p {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 40px;
+        }
+        .offers {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        .offer {
+            background: linear-gradient(135deg, #f9f9f9, #e3f2fd);
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .offer:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .offer h3 {
+            color: #4caf50;
+            margin: 15px 0;
+            font-size: 1.5em;
+        }
+        .offer p {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.6;
+        }
+        .offer .cta {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #1a73e8;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .offer .cta:hover {
+            background: #4caf50;
+        }
+        footer {
+            background: #1a73e8;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .offers {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Special Offers at OmDigitalSolution</h1>
+        <p>Exclusive Discounts and Deals for You!</p>
+    </header>
+    <section class="offer-section">
+        <h2>Current Offers</h2>
+        <p>Discover the latest discounts and benefits available at us.</p>
+        <div class="offers">
+            <div class="offer">
+                <h3>50% Off Aadhaar Services</h3>
+                <p>Get your Aadhaar updated or corrected at half the price.</p>
+                <a href="#" class="cta">Avail Now</a>
+            </div>
+            <div class="offer">
+                <h3>Free PAN Card Assistance</h3>
+                <p>Avail free guidance for applying for or updating your PAN card.</p>
+                <a href="#" class="cta">Get Started</a>
+            </div>
+            <div class="offer">
+                <h3>10% Off Bill Payments</h3>
+                <p>Pay your utility bills through us and save more.</p>
+                <a href="#" class="cta">Pay Now</a>
+            </div>
+            <div class="offer">
+                <h3>Exclusive Banking Services</h3>
+                <p>Enjoy special rates and privileges on select banking services.</p>
+                <a href="#" class="cta">Learn More</a>
+            </div>
+            <div class="offer">
+                <h3>join our Loyalty program</h3>
+                <p>Enjoy special discounts on selected services.</p>
+                <a href="loyalty.html" class="cta">Learn More</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 OmDigitalSolution. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

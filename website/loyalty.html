@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Loyalty Program - Rewarding Our Valuable Customers">
+    <meta name="keywords" content="Loyalty Program, Rewards, Points, Membership">
+    <meta name="author" content="Janaseva Kendra">
+    <title>Loyalty Program</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(45deg, #ff7f50, #ff4500);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(to bottom, #ffecd2, #fcb69f);
+            color: #333;
+        }
+        .hero h2 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .program-details {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .program-details h3 {
+            color: #ff4500;
+            font-size: 1.8em;
+        }
+        .program-details p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-top: 15px;
+        }
+        .points-tracker {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px 0;
+        }
+        .points-tracker div {
+            margin: 0 20px;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to bottom right, #fbc2eb, #a18cd1);
+            color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .points-tracker h4 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .points-tracker p {
+            font-size: 1.2em;
+            margin: 10px 0 0;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 20px;
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .hero, .program-details, .points-tracker div {
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .join-now {
+            display: block;
+            text-align: center;
+            margin: 40px auto;
+            padding: 15px 30px;
+            background-color: #ff4500;
+            color: white;
+            font-size: 1.2em;
+            text-decoration: none;
+            border-radius: 6px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .join-now:hover {
+            background-color: #d73c00;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Loyalty Program</h1>
+        <p>Rewarding Our Valuable Customers</p>
+    </header>
+    <section class="hero">
+        <h2>Join Our Loyalty Program Today!</h2>
+        <p>Earn points, enjoy exclusive rewards, and experience premium benefits.</p>
+    </section>
+    <section class="program-details">
+        <h3>How It Works</h3>
+        <p>Earn points on every transaction you make with us. Redeem these points for exciting rewards and offers. The more you engage, the more you gain!</p>
+        <p>Sign up now and enjoy instant membership benefits.</p>
+    </section>
+    <section class="points-tracker">
+        <div>
+            <h4>Points Earned</h4>
+            <p>1500</p>
+        </div>
+        <div>
+            <h4>Rewards Available</h4>
+            <p>5</p>
+        </div>
+        <div>
+            <h4>Next Milestone</h4>
+            <p>2000 Points</p>
+        </div>
+    </section>
+    <a href="join.html" class="join-now">Join Now</a>
+    <footer>
+        <p>&copy; 2024 Janaseva Kendra. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
