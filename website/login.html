@@ -19,10 +19,11 @@
             text-align: center;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
-            padding: 40px 100px;
+            padding: 40px 30px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(10px);
-            width: 350px;
+            width: 90%;
+            max-width: 350px;
         }
         .container h1 {
             margin-bottom: 20px;
@@ -81,6 +82,48 @@
         }
         h1 {
             animation: glow 1.5s infinite;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+            .container h1 {
+                font-size: 2em;
+            }
+            .container h2 {
+                font-size: 1em;
+            }
+            .container input[type="text"],
+            .container input[type="password"] {
+                font-size: 0.9em;
+            }
+            .container button {
+                font-size: 0.9em;
+                padding: 8px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px 15px;
+            }
+            .container h1 {
+                font-size: 1.8em;
+            }
+            .container h2 {
+                font-size: 0.9em;
+            }
+            .container input[type="text"],
+            .container input[type="password"] {
+                font-size: 0.8em;
+                padding: 8px;
+            }
+            .container button {
+                font-size: 0.8em;
+                padding: 7px 10px;
+            }
         }
     </style>
 </head>
