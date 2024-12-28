@@ -22,6 +22,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         header h1 {
             margin: 0;
@@ -31,18 +32,34 @@
             font-size: 1.2em;
         }
         .hero {
+            position: relative;
             text-align: center;
+            color: #fff;
             padding: 60px 20px;
-            background: linear-gradient(to bottom, #ffecd2, #fcb69f);
-            color: #333;
+            background: url('https://source.unsplash.com/1920x1080/?rewards,shopping') center/cover no-repeat;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
         }
         .hero h2 {
             font-size: 2.5em;
             margin: 0;
+            animation: slideInDown 1.5s ease-in-out;
         }
         .hero p {
             font-size: 1.2em;
             margin-top: 10px;
+            animation: fadeInUp 2s ease-in-out;
         }
         .program-details {
             max-width: 1200px;
@@ -56,26 +73,31 @@
         .program-details h3 {
             color: #ff4500;
             font-size: 1.8em;
+            animation: bounceIn 1.5s ease;
         }
         .program-details p {
             font-size: 1.1em;
             line-height: 1.6;
             margin-top: 15px;
+            color: #555;
         }
         .points-tracker {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 40px 0;
+            margin: 40px 20px;
+            flex-wrap: wrap;
+            gap: 20px;
         }
         .points-tracker div {
-            margin: 0 20px;
+            flex: 1 1 250px;
             text-align: center;
             padding: 20px;
             background: linear-gradient(to bottom right, #fbc2eb, #a18cd1);
             color: white;
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: scaleUp 1s ease-in-out;
         }
         .points-tracker h4 {
             margin: 0;
@@ -84,30 +106,6 @@
         .points-tracker p {
             font-size: 1.2em;
             margin: 10px 0 0;
-        }
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 20px 10px;
-            margin-top: 20px;
-        }
-        footer p {
-            margin: 0;
-            font-size: 0.9em;
-        }
-        @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .hero, .program-details, .points-tracker div {
-            animation: fadeInUp 1s ease-in-out;
         }
         .join-now {
             display: block;
@@ -121,10 +119,100 @@
             border-radius: 6px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: background-color 0.3s ease, transform 0.3s ease;
+            animation: fadeInUp 1s ease-in-out;
         }
         .join-now:hover {
             background-color: #d73c00;
             transform: translateY(-2px);
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slideInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes scaleUp {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            60% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            .hero h2 {
+                font-size: 2em;
+            }
+            .program-details {
+                padding: 15px;
+            }
+            .program-details h3 {
+                font-size: 1.5em;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero h2 {
+                font-size: 1.8em;
+            }
+            .points-tracker {
+                flex-direction: column;
+            }
+            .points-tracker div {
+                flex: 1 1 auto;
+            }
         }
     </style>
 </head>
@@ -134,8 +222,11 @@
         <p>Rewarding Our Valuable Customers</p>
     </header>
     <section class="hero">
-        <h2>Join Our Loyalty Program Today!</h2>
-        <p>Earn points, enjoy exclusive rewards, and experience premium benefits.</p>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2>Join Our Loyalty Program Today!</h2>
+            <p>Earn points, enjoy exclusive rewards, and experience premium benefits.</p>
+        </div>
     </section>
     <section class="program-details">
         <h3>How It Works</h3>
@@ -158,7 +249,7 @@
     </section>
     <a href="join.html" class="join-now">Join Now</a>
     <footer>
-        <p>&copy; 2024 Janaseva Kendra. All Rights Reserved.</p>
+        <p>&copy; 2024 Om Digital Solution. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
