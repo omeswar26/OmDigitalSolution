@@ -94,6 +94,51 @@
             color: white;
             font-size: 14px;
         }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            header {
+                font-size: 20px;
+                padding: 10px 15px;
+            }
+            .container {
+                margin: 20px auto;
+                padding: 15px;
+            }
+            h1 {
+                font-size: 22px;
+            }
+            input, textarea, button {
+                font-size: 14px;
+            }
+            button {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                font-size: 18px;
+                padding: 10px;
+            }
+            .container {
+                margin: 10px;
+                padding: 10px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 14px;
+            }
+            input, textarea, button {
+                font-size: 12px;
+                padding: 8px;
+            }
+            button {
+                font-size: 14px;
+            }
+        }
     </style>
     <script>
         async function handleSubmit(event) {
@@ -148,7 +193,7 @@
         </form>
     </div>
     <footer>
-        &copy; 2024 OmDigitalSolution. All rights reserved.
+        &copy; 2024 Your Company Name. All rights reserved.
     </footer>
 </body>
 </html>
